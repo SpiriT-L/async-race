@@ -11,6 +11,9 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
+  "eslint.options": {
+    "ignorePattern": "webpack.config.js",
+},
   plugins: [
     '@typescript-eslint'
   ],
