@@ -1,22 +1,17 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
   },
-  extends: [
-    'standard'
-  ],
+  extends: ['standard'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
   },
-  "eslint.options": {
-    "ignorePattern": "webpack.config.js",
-},
-  plugins: [
-    '@typescript-eslint'
-  ],
-  rules: {
-  }
-}
+  'eslint.options': {
+    ignorePattern: 'webpack.config.js',
+  },
+  plugins: ['@typescript-eslint'],
+  rules: {},
+};
