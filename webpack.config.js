@@ -90,6 +90,9 @@ module.exports = {
     // new ESLintPlugin(),
   ],
   devtool: isProd ? false : 'source-map',
+  resolve: {
+    extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js'],
+  },
   module: {
     rules: [
       {
@@ -146,7 +149,7 @@ module.exports = {
         use: ['babel-loader'],
         // type: 'asset/resource',
       },
-      { test: /\.ts?$/, loader: "ts-loader" },
+      { test: /\.ts?$/, loader: 'ts-loader' },
 
       {
         test: /\.(?:|png|gif|jpg|jpeg|webp|svg)$/i,
