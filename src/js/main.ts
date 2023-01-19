@@ -4,7 +4,7 @@ import '../scss/main.scss';
 import '../index.html';
 // import './api/API';
 
-import { getCars } from './api/api';
+import { getCars, getCar, createCar, deleteCar } from './api/api';
 // import './task';
 // import './ancients.js';
 // import './playing-field';
