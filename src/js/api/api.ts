@@ -16,3 +16,17 @@ export const getCars = async (page: string, limit = 7) => {
   };
 };
 
+export const getCar = async (id: number) =>
+  (await fetch(`${garage}/${id}`)).json();
+
+export const createCar = async (body: string) =>
+  (
+    await fetch(garage, {
+      method: 'POST',
+      body: JSON.stringify(body),
+      headers: { 'Content-Type': 'appLication/json' },
+    })
+  ).json();
+
+export const deleteCar = async (id: number) =>
+  (await fetch(`${garage}/${id}`, { method: 'DELETE' })).json();
