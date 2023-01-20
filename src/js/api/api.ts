@@ -30,3 +30,20 @@ export const createCar = async (body: string) =>
 
 export const deleteCar = async (id: number) =>
   (await fetch(`${garage}/${id}`, { method: 'DELETE' })).json();
+
+export const updateCar = async (id: number, body: string) =>
+  (
+    await fetch(`${garage}/${id}`, {
+      method: 'PUT',
+      body: JSON.stringify(body),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+  ).json();
+
+export const startEngine = async (id: number) =>
+  (await fetch(`${engine}?id=${id}&status=started`)).json();
+
+export const stopEngine = async (id: number) =>
+  (await fetch(`${engine}?id=${id}&status=stopped`)).json();
