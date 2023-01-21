@@ -18,6 +18,9 @@ export const getCars = async (page: string, limit = 7) => {
   };
 };
 
+export const getCarById = async (id: string): Promise<Car> =>
+  (await fetch(`${garage}/${id}`)).json();
+
 export const getCar = async (id: number) =>
   (await fetch(`${garage}/${id}`)).json();
 
