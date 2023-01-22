@@ -14,6 +14,7 @@
 .main {
   min-height: calc(100vh - 13rem);
   display: flex;
+  flex-direction: column;
   width: 100%;
   margin: 0 auto;
   border-right: 0.5rem solid var(--main-color);
@@ -22,18 +23,20 @@
 }
 
 .tools {
-  min-height: inherit;
+  // min-height: inherit;
   min-width: 38rem;
   background-color: var(--main-color);
   padding: 5rem 2rem;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 4rem;
   .tools__pages {
     display: flex;
     justify-content: space-between;
     width: 24.2rem;
-    margin: 0 auto;
+    // margin: 0 auto;
     .tools__garage-btn {
       border-radius: 0.5rem 0 0 0.5rem;
     }
@@ -53,6 +56,7 @@
   width: 9rem;
   height: 3.4rem;
   font-size: 1.8rem;
+  margin: 0 0 0 3px;
 }
 
 .tools__forms {
@@ -76,7 +80,9 @@
 
   .input {
     height: 3rem;
-    width: 16rem;
+    // width: 16rem;
+    margin: 0px 5px 0px 0px;
+    width:100%;
     border: 0;
     font-size: 2rem;
     padding: 0.5rem 1rem;
@@ -150,13 +156,13 @@
   display: none;
 }
 
- .subtitle {
-      font-size: 3rem;
-      text-align: center;
-      margin-bottom: 1rem;
-    }
- .subtitle__page {
-      font-size: 2rem;
-      text-align: center;
-      margin-bottom: 1rem;
-    }
+.subtitle {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.subtitle__page {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
