@@ -10,7 +10,6 @@ export type Cars = {
   count: string | null;
 };
 
-
 export type AnyCar = {
   name: string;
   color: string;
