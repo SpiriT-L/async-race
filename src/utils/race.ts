@@ -10,8 +10,9 @@ export const raceAll = async (promises: Array<Promise<DrivingStatus>>, ids: numb
     const restIds = [...ids.slice(0, failedIndex), ...ids.slice(failedIndex + 1, ids.length)];
     return raceAll(restPromises, restIds);
   }
+  const winnerNumber: number = 0;
 
-  const winner: Car = store.cars.filter((car: Car): boolean => car.id === id)[0];
+  const winner: Car = store.cars.filter((car: Car): boolean => car.id === id)[winnerNumber];
 
   return {
     ...winner,
